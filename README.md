@@ -20,16 +20,16 @@ npm install 'https://github.com/codyduong/eslint-config-codyduong.git#semver:v1.
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: {
+  extends: [
     'codyduong',
-  },
+  ],
 }
 ```
 `.eslintrc`
 ```json
 {
-  "extends": {
+  "extends": [
     "codyduong"
-  }
+  ]
 }
 ```
