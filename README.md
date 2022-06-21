@@ -1,5 +1,5 @@
 # eslint-config-codyduong
-My opinionated esling configuration
+My opinionated eslint configuration
 
 ## Install
 yarn
