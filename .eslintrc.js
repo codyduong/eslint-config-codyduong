@@ -23,15 +23,24 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.js'],
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.js', '*.mjs', '*.cjs'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'warn',
         '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'warn',
-          { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+          {
+            varsIgnorePattern: '^_',
+            argsIgnorePattern: '^_',
+            destructuredArrayIgnorePattern: '^_',
+          },
         ],
-        '@typescript-eslint/explicit-function-return-type': ['warn'],
+        '@typescript-eslint/explicit-function-return-type': [
+          'warn',
+          {
+            allowExpressions: true,
+          },
+        ],
         'no-empty-function': 'warn',
         '@typescript-eslint/no-empty-function': ['warn'],
       },
