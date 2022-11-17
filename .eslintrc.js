@@ -26,7 +26,6 @@ module.exports = {
       files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.js', '*.mjs', '*.cjs'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'warn',
-        '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {
@@ -35,15 +34,21 @@ module.exports = {
             destructuredArrayIgnorePattern: '^_',
           },
         ],
+        'no-empty-function': 'warn',
+        '@typescript-eslint/no-empty-function': ['warn'],
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/explicit-function-return-type': [
           'warn',
           {
             allowExpressions: true,
           },
         ],
-        'no-empty-function': 'warn',
-        '@typescript-eslint/no-empty-function': ['warn'],
-      },
-    },
+      }
+    }
   ],
 };
